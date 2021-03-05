@@ -1,0 +1,30 @@
+body{
+    height:100vh;
+    width:100vw;
+}
+.dpad{
+    background-image: url(/static/BgDpad.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+}
+
+.video-feed{
+    position:absolute;
+    top: 30%;
+}
+
+.actions{
+    position: absolute;
+    top: 38%;
+    left: 24%;
+}
+
+.btn-circle {
+    width: 60px;
+    height: 60px;
+    padding: 10px 16px;
+    border-radius: 35px;
+    font-size: 24px;
+    line-height: 1.33;
+}

@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        {% block head %}
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+        {% block styles %}
+            <!-- Bootstrap CSS -->
+            {{ bootstrap.load_css() }}
+        {% endblock %}
+        <title>Twitch Bot Controller</title>
+        {% endblock %}
+        
+        <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/style.css') }}">
+        <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/dpad.css') }}">
+    </head>
+    <body class="text-center" style="background-color: #1C1C1C;">
+        <div class="container">
+            <div class="row m-0" style="height: 20%;">
+                <div class="col text-center mt-4">
+                    <h1 class="display-3 text-light">TWITCH BOT</h1>
+                </div>
+            </div>
+            <div class="row padbg" style="height: 20%;">
+                <div class="col text-center h-100">
+                    <div class="set">
+                      <nav class="d-pad">
+                        <a class="up" href="#"></a>
+                        <a class="right" href="#"></a>
+                        <a class="down" href="#"></a>
+                        <a class="left" href="#"></a>  
+                      </nav>
+                    </div>
+                </div>
+                <div class="col text-center h-100">
+                    
+                </div>
+                <div class="col text-center h-100">
+                    
+                </div>
+            </div>
+        </div>
+        {% block scripts %}
+            <!-- Optional JavaScript -->
+            {{ bootstrap.load_js() }}
+        {% endblock %}
+        <script type="text/javascript" src="{{ url_for('static',filename='js/dpad.js') }}"></script>
+    </body>
+</html>

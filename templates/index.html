@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        {% block head %}
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+        {% block styles %}
+            <!-- Bootstrap CSS -->
+            {{ bootstrap.load_css() }}
+        {% endblock %}
+        <title>Twitch Bot Controller</title>
+        {% endblock %}
+        <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/style.css') }}">
+        <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/dpad.css') }}">
+    </head>
+    <body class="text-center" style="background-color: #1C1C1C;">
+        <div class="container h-100">
+            <div class="row m-0" style="height: 20%">
+                <div class="col text-center mt-4">
+                    <h1 class="display-1 text-light font-weight-bold">TWITCH BOT</h1>
+                </div>
+            </div>
+            <div class="row dpad" style="height: 80%">
+                <div class="col text-center h-100">
+                    <nav class="d-pad">
+                        <a class="up movement" href="#" id="forward"></a>
+                        <a class="right movement" href="#" id="right"></a>
+                        <a class="down movement" href="#" id="back"></a>
+                        <a class="left movement" href="#" id="left"></a>  
+                    </nav>
+                </div>
+                <div class="col text-center h-100">
+                    <div class="video-feed">
+                        <img src="{{url_for('static', filename='feed.jpg')}}" class="img-fluid" alt="Responsive image">
+                    </div>
+                </div>
+                <div class="col text-center h-100">
+                    <div class="actions">
+                        <a class="btn btn-primary movement rounded-pill my-2 btn-circle" href="#" id="option1">A</a><span> SHOOT</span><br>
+                        <a class="btn btn-primary movement rounded-pill my-2 btn-circle" href="#" id="option2">B</a><span> SHOOT</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        {% block scripts %}
+            <!-- Optional JavaScript -->
+            {{ bootstrap.load_js() }}
+        {% endblock %}
+        <script src="{{url_for('static', filename='js/dpad.js')}}"></script>
+    </body>
+</html>
